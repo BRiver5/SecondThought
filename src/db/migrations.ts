@@ -5,12 +5,34 @@ import type { SQLiteDatabase } from "expo-sqlite";
 // применённой ступени, миграции применяются последовательно от текущего значения.
 const migrations: string[] = [
   `
-  -- Миграция 1 — пример. Замени "items" на реальные сущности приложения
-  -- и удали этот комментарий вместе с примером ниже.
-  CREATE TABLE IF NOT EXISTS items (
+  CREATE TABLE IF NOT EXISTS wants (
     id TEXT PRIMARY KEY NOT NULL,
-    title TEXT NOT NULL,
-    created_at TEXT NOT NULL
+    name TEXT NOT NULL,
+    price REAL NOT NULL,
+    category TEXT NOT NULL,
+    trigger TEXT NOT NULL,
+    desire INTEGER NOT NULL,
+    created_day TEXT NOT NULL,
+    wait_days INTEGER NOT NULL,
+    p_fade REAL,
+    status TEXT NOT NULL,
+    resolved_day TEXT,
+    note TEXT NOT NULL DEFAULT ''
+  );
+  CREATE TABLE IF NOT EXISTS checkins (
+    id TEXT PRIMARY KEY NOT NULL,
+    want_id TEXT NOT NULL,
+    day TEXT NOT NULL,
+    still INTEGER NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS model (
+    key TEXT PRIMARY KEY NOT NULL,
+    n REAL NOT NULL,
+    days REAL NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS settings (
+    key TEXT PRIMARY KEY NOT NULL,
+    value TEXT NOT NULL
   );
   `,
 ];

@@ -2,8 +2,8 @@ import { addDays, dayLabel, weekdayLabel } from "../lib/time.ts";
 import { pluralWord } from "../lib/words.ts";
 
 export function money(x: number, cur: string): string {
-  const v = Math.abs(x) < 0.005 ? 0 : x;
-  const s = Math.abs(v) >= 100 ? Math.round(v).toString() : v.toFixed(2);
+  const v = Math.abs(x) < 0.005 ? 0 : Math.round(x * 100) / 100;
+  const s = Math.abs(v) >= 100 || Number.isInteger(v) ? Math.round(v).toString() : v.toFixed(2);
   return cur.length > 1 ? `${s} ${cur}` : `${cur}${s}`;
 }
 

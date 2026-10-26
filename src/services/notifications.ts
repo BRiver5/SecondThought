@@ -89,3 +89,9 @@ export async function cancelAll(): Promise<void> {
   if (!N) return;
   await N.cancelAllScheduledNotificationsAsync();
 }
+
+export async function cancelOne(id: string): Promise<void> {
+  const N = load();
+  if (!N) return;
+  await N.cancelScheduledNotificationAsync(id).catch(() => {});
+}

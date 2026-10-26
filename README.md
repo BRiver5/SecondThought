@@ -1,43 +1,11 @@
 # Second Thought
 
-**{{TAGLINE}}**
+Hold the urge, buy what lasts. A local-only "no impulse buys" tracker: every
+want goes on hold, the app picks how long from a model of how fast your own
+urges fade, and a monthly fun fund decides what you can actually buy.
 
-{{Один абзац о том, что делает приложение и для кого.}}
+- Expo SDK 54, expo-router, expo-sqlite (no network, no account)
+- Engine in `src/lib` (desire model → hold length → fund plan → forecast), unit-tested: `npm test`
+- `npm run verify` — tsc + tests + rules + offline export
 
-## Особенности
-
-- ...
-
-## Стек
-
-- Expo SDK 54 + expo-router, TypeScript
-- `expo-sqlite` — вся persistence локально на устройстве, интернет не нужен
-- `expo-notifications` / `expo-haptics` — если приложение их использует
-
-## Запуск
-
-```bash
-npm install
-npx expo start
-```
-
-`a` — Android, `i` — iOS, либо QR-код через Expo Go.
-
-## Структура проекта
-
-```
-app/            expo-router экраны
-src/
-  theme/        палитра, типографика, отступы, анимации
-  db/           expo-sqlite схема + миграции
-  data/         доступ к данным (замени items.example.ts)
-  services/     notifications, haptics
-  components/   переиспользуемые UI-примитивы
-  lib/          id, даты
-tools/          генератор иконок, проверки, rename-скрипт
-```
-
-## Данные
-
-Все данные хранятся локально на устройстве. Регистрации нет, интернет не
-требуется для работы приложения.
+See `PLAN.md` for the model and screens.
