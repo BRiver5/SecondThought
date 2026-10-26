@@ -78,7 +78,7 @@ export function Sheet({
               <X size={18} color={t.colors.inkMuted} />
             </PressableScale>
           </View>
-          <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: t.spacing.xl, paddingTop: t.spacing.lg, gap: t.spacing.lg }}>
+          <ScrollView style={{ flexShrink: 1 }} keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: t.spacing.xl, paddingTop: t.spacing.lg, gap: t.spacing.lg }}>
             {children}
           </ScrollView>
           {footer ? <View style={{ paddingHorizontal: t.spacing.xl }}>{footer}</View> : null}

@@ -28,7 +28,7 @@ export function PrimaryButton({ label, onPress, disabled }: Props) {
         alignItems: "center",
       }}
     >
-      <Text style={{ color: theme.colors.onAccent, ...theme.typography.subtitle }}>{label}</Text>
+      <Text numberOfLines={1} style={{ color: theme.colors.onAccent, ...theme.typography.subtitle }}>{label}</Text>
     </PressableScale>
   );
 }
