@@ -5,13 +5,13 @@
     "version": "1.0.0",
     "scheme": "secondthought",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./release/creo/icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./release/creo/icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF"
+      "backgroundColor": "#EDEFE8"
     },
     "ios": {
       "supportsTablet": true,
@@ -21,8 +21,8 @@
       "package": "com.secondthought.app",
       "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundImage": "./assets/adaptive-icon-background.png",
-        "foregroundImage": "./assets/adaptive-icon-foreground.png"
+        "foregroundImage": "./release/creo/adaptive-foreground.png",
+        "backgroundColor": "#6A8539"
       },
       "predictiveBackGestureEnabled": false,
       "_comment_blockedPermissions": "Приложение по умолчанию локальное: только уведомления и вибрация. INTERNET и SYSTEM_ALERT_WINDOW тоже заблокированы — JS-бандл и шрифты едут внутри AAB, сеть не нужна (проверено на Churnly/Quietzone/Useby). Если конкретному приложению реально нужно что-то из списка ниже — удали строку и напиши рядом, зачем (см. docs/PLAN.template.md, раздел \"Разрешения\").",
